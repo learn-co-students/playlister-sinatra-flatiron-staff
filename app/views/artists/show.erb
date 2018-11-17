@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Individual Artist</title>
+  </head>
+  <body>
+    <h1><%=@artist.name%></h1>
+
+    <h2>Songs:</h2>
+    <ul>
+      <%@artist.songs.each do |s|%>
+        <li><a href="/songs/<%=s.slug%>"><%=s.name%></a></li>
+      <%end%>
+    </ul>
+
+    <h2>Genres:</h2>
+    <ul>
+      <%@artist.genres.each do |g|%>
+        <li><a href="/genres/<%=g.slug%>"><%=g.name%></a></li>
+      <%end%>
+    </ul>
+  </body>
+</html>

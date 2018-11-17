@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Genres</title>
+  </head>
+  <body>
+    <!-- Iterate through the artist objects and return the name and the link to the slugified page route -->
+
+    <ul>
+    <%Genre.all.each do |g|%>
+      <li><a href="/genres/<%=g.slug%>"><%=g.name%></a></li>
+    <%end%>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Artists</title>
+  </head>
+  <body>
+    <!-- Iterate through the artist objects and return the name and the link to the slugified page route -->
+
+    <ul>
+    <%Artist.all.each do |a|%>
+      <li><a href="/artists/<%=a.slug%>"><%=a.name%></a></li>
+    <%end%>
+    </ul>
+  </body>
+</html>
