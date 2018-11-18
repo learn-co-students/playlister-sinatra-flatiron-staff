@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Individual Song</title>
+  </head>
+  <body>
+    <h2>Artist: </h2><a href="/artists/<%=@song.artist.slug%>"><h2><%=@song.artist.name%></h2></a>
+    <h4>Genres:</h4>
+    <ul>
+      <%@song.genres.each do |g|%>
+        <li><a href="/genres/<%=g.slug%>"><%=g.name%></a></li>
+      <%end%>
+    </ul>
+  </body>
+</html>
